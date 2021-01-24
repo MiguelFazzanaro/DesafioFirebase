@@ -2,20 +2,10 @@
     <!-- Base application theme. -->
     <style name="Theme.DesafioFirebase" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/azul</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/azul</item>
-        <item name="colorSecondaryVariant">@color/cinza</item>
-        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="MyStyle">
-        <item name="android:textColor">@color/verde</item>
-        <item name="android:textColorHint">@color/cinza</item>
-    </style>
+
 </resources>

@@ -23,7 +23,7 @@
         android:layout_height="400dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#FFFFFFFF"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,10 +45,11 @@
                     android:id="@+id/tvNewName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#FFFFFFFF"
                     android:hint="Name"
+                    android:textColorHint="#FFCBD0D8"
                     android:inputType="text"
-                    android:textColor="@color/detalheVermelho" />
+                    android:textColor="#FF60BDB5" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -61,10 +62,11 @@
                     android:id="@+id/tvNewEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#FFFFFFFF"
                     android:hint="Email"
+                    android:textColorHint="#FFCBD0D8"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/detalheVermelho" />
+                    android:textColor="#FF60BDB5" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -77,10 +79,11 @@
                     android:id="@+id/tvNewPassowrd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#FFFFFFFF"
                     android:hint="Password"
+                    android:textColorHint="#FFCBD0D8"
                     android:inputType="textPassword"
-                    android:textColor="@color/detalheVermelho" />
+                    android:textColor="#FF60BDB5" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -93,10 +96,11 @@
                     android:id="@+id/tvRepeatPassowrd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#FFFFFFFF"
                     android:hint="Repeat password"
+                    android:textColorHint="#FFCBD0D8"
                     android:inputType="textPassword"
-                    android:textColor="@color/detalheVermelho" />
+                    android:textColor="#FF60BDB5" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -106,8 +110,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
-                android:backgroundTint="@color/detalheVermelho"
+                android:backgroundTint="#FFEA2427"
                 android:text="Save"
+                android:textColor="#FFFFFFFF"
                 android:textSize="15dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
