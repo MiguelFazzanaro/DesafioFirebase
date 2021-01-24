@@ -21,7 +21,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="320dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#FFFFFFFF"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         app:cardCornerRadius="20dp"
@@ -30,6 +30,7 @@
         tools:layout_editor_absoluteX="20dp">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"
@@ -40,15 +41,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvEmailRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#FFFFFFFF"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/detalheVermelho" />
+                    android:textColorHint="@color/cinza"
+                    android:textColor="@color/verde" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -56,14 +57,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tvPassowrdRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#FFFFFFFF"
                     android:hint="Password"
                     android:inputType="textPassword"
+                    android:textColorHint="@color/detalheVermelho"
                     android:textColor="@color/detalheVermelho" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,6 +75,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:backgroundTint="@color/detalheVermelho"
+                android:textColor="@color/black"
                 android:text="Remeber" />
 
             <Button
@@ -90,6 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Create account"
+                android:textColor="@color/azul"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textSize="20dp" />
         </LinearLayout>
