@@ -42,7 +42,7 @@
                 android:layout_marginRight="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tvNewName"
+                    android:id="@+id/tvNameRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#FFFFFFFF"
@@ -59,7 +59,7 @@
                 android:layout_marginRight="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tvNewEmail"
+                    android:id="@+id/tvEmailRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#FFFFFFFF"
@@ -76,7 +76,7 @@
                 android:layout_marginRight="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tvNewPassowrd"
+                    android:id="@+id/tvPassowrdRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#FFFFFFFF"
@@ -93,7 +93,7 @@
                 android:layout_marginRight="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tvRepeatPassowrd"
+                    android:id="@+id/tvRepeatPassowrdRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#FFFFFFFF"

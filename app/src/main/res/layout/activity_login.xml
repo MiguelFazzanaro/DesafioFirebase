@@ -42,7 +42,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tvEmailRegister"
+                    android:id="@+id/tvEmailLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#FFFFFFFF"
@@ -59,7 +59,7 @@
                 android:layout_marginRight="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tvPassowrdRegister"
+                    android:id="@+id/tvPassowrdLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#FFFFFFFF"

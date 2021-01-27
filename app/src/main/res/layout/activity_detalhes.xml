@@ -43,10 +43,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="330dp"
-                android:backgroundTint="#FFFF0000"
                 android:clickable="true"
                 android:foregroundTint="#FFFF0000"
-                android:tint="#FFFF0000"
                 app:srcCompat="@drawable/ic_pencil"
                 tools:ignore="MissingConstraints" />
 

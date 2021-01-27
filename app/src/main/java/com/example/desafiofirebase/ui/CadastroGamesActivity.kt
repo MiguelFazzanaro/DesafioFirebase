@@ -9,4 +9,6 @@ class CadastroGamesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro_games)
     }
+
+
 }
