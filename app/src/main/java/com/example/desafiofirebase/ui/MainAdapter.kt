@@ -24,6 +24,7 @@ class MainAdapter (var listaGames: ArrayList<Games>, val listener: OnGamesClickL
     override fun onBindViewHolder(holder: GamesViewHolder, position: Int) {
         var lista = listaGames.get(position)
 
+        Picasso.get().load(lista.imagem).resize(115,100).into(holder.img)
         holder.nome.text = lista.nome
         holder.data.text = lista.data
 //        holder.descricao.text = lista.descricao
@@ -35,7 +36,7 @@ class MainAdapter (var listaGames: ArrayList<Games>, val listener: OnGamesClickL
     }
 
     inner class GamesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{
-//        val img: ImageView = itemView.findViewById(R.id.ivGameImagem)
+        val img: ImageView = itemView.ivGameImagem
         val nome: TextView = itemView.tvGameNome
         val data: TextView = itemView.tvGameAdicionado
 //        val descricao: TextView = itemView.tvNewGameDescription

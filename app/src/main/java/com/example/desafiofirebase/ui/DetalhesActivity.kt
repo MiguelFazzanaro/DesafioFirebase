@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.desafiofirebase.R
 import com.example.desafiofirebase.models.Games
 import com.example.desafiofirebase.service.collectionReference
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detalhes.*
 
 class DetalhesActivity : AppCompatActivity() {
@@ -30,23 +31,16 @@ class DetalhesActivity : AppCompatActivity() {
 
         var idGame = intent.getStringExtra("game")
 
-
         viewModelDetalhe.collectionReference.document(idGame.toString()).get().addOnSuccessListener { documentSnapshot ->
             game = documentSnapshot.toObject(Games::class.java)!!
             game.id = idGame.toString()
 
+            Picasso.get().load(game.imagem).resize(115,100).into(ivDetalheGame)
             tvDetalheNome.text = game.nome
             tvDetalheAno.text = game.data
             tvDetalheDescricao.text = game.descricao
 
-
-
-
         }
-
-
-
-
 
         fbEditGame.setOnClickListener {
             var gameClick = game.id
