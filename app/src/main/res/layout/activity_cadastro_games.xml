@@ -12,8 +12,6 @@
         android:id="@+id/cardview1"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:backgroundTint="#FFFFFFFF"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,9 +36,9 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="#FFFFFFFF"
                     android:hint="Name"
-                    android:textColorHint="#FFCBD0D8"
                     android:inputType="text"
-                    android:textColor="#FF60BDB5" />
+                    android:textColor="#FF60BDB5"
+                    android:textColorHint="#FFCBD0D8" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -55,9 +53,9 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="#FFFFFFFF"
                     android:hint="Created at"
-                    android:textColorHint="#FFCBD0D8"
                     android:inputType="text"
-                    android:textColor="#FF60BDB5" />
+                    android:textColor="#FF60BDB5"
+                    android:textColorHint="#FFCBD0D8" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -72,9 +70,9 @@
                     android:layout_height="150dp"
                     android:backgroundTint="#FFFFFFFF"
                     android:hint="Description"
-                    android:textColorHint="#FFCBD0D8"
                     android:inputType="text"
-                    android:textColor="#FF60BDB5" />
+                    android:textColor="#FF60BDB5"
+                    android:textColorHint="#FFCBD0D8" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -95,12 +93,14 @@
         android:id="@+id/fbTakePicture"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:clickable="true"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/vermelho"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/cardview1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_camera"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="106dp" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
