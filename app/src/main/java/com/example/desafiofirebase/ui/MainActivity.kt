@@ -37,7 +37,9 @@ class MainActivity : AppCompatActivity(), MainAdapter.OnGamesClickListener {
 //            var games = arrayListOf<Games>()
             for (document in documents){
                 val populate: Games = document.toObject(Games::class.java)
+                populate.id = document.id
                 viewModelHome.retornoGames.add(populate)
+
             }
             rvGames.adapter = MainAdapter(viewModelHome.retornoGames, this)
             rvGames.setHasFixedSize(true)
@@ -65,7 +67,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.OnGamesClickListener {
 //    }
 
     override fun GamesClick(position: Int) {
-        var gameClick = viewModelHome.retornoGames.get(position).nome
+        var gameClick = viewModelHome.retornoGames.get(position).id
         var intent = Intent(this, DetalhesActivity::class.java)
         intent.putExtra("game", gameClick)
         startActivity(intent)

@@ -3,6 +3,8 @@ package com.example.desafiofirebase.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModel
@@ -11,9 +13,12 @@ import com.example.desafiofirebase.R
 import com.example.desafiofirebase.models.Games
 import com.example.desafiofirebase.service.collectionReference
 import kotlinx.android.synthetic.main.activity_cadastro_games.*
+import kotlinx.android.synthetic.main.activity_detalhes.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class CadastroGamesActivity : AppCompatActivity() {
+
+    lateinit var game : Games
 
     val viewModelCadastro by viewModels<MainViewModel> {
         object : ViewModelProvider.Factory {
@@ -23,11 +28,35 @@ class CadastroGamesActivity : AppCompatActivity() {
         }
     }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro_games)
 
-        btSaveGame.setOnClickListener {
+        var idGame = intent.getStringExtra("game")
+
+
+        if(idGame != null){
+            viewModelCadastro.collectionReference.document(idGame.toString()).get().addOnSuccessListener { documentSnapshot ->
+                game = documentSnapshot.toObject(Games::class.java)!!
+                game.id = idGame.toString()
+                Log.i("AAAAAA", game.toString())
+
+                tvNewGameDescription.setText(game.descricao)
+                tvNewGameDate.setText(game.data)
+                tvNewGameName.setText(game.nome)
+
+                btSaveGame.setOnClickListener {
+                    val myRef = viewModelCadastro.collectionReference.document(idGame.toString())
+                    myRef.update("descricao", tvNewGameDescription.text.toString())
+                    myRef.update("data", tvNewGameDate.text.toString())
+                    myRef.update("nome", tvNewGameName.text.toString())
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
+            }
+        } else {
+            btSaveGame.setOnClickListener {
                 var newGame: Games = Games(tvNewGameName.text.toString(),
                     tvNewGameDate.text.toString(),
                     tvNewGameDescription.text.toString(),
@@ -35,7 +64,12 @@ class CadastroGamesActivity : AppCompatActivity() {
                 )
                 viewModelCadastro.newGame(newGame)
                 startActivity(Intent(this, MainActivity::class.java))
+            }
+
         }
+
+
+
     }
 
 

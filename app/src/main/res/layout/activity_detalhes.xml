@@ -12,9 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
-
         <LinearLayout
             android:id="@+id/linearTop"
             android:layout_width="match_parent"
@@ -34,19 +31,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="230dp">
+            android:layout_marginTop="240dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fbEditGame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="330dp"
+                android:layout_marginLeft="300dp"
+                android:backgroundTint="#FFFF0000"
                 android:clickable="true"
-                android:foregroundTint="#FFFF0000"
-                app:srcCompat="@drawable/ic_pencil"
-                tools:ignore="MissingConstraints" />
+                app:srcCompat="@drawable/ic_pencil" />
 
         </LinearLayout>
 
@@ -58,7 +56,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearTop"
+            app:layout_constraintTop_toBottomOf="parent"
             android:orientation="vertical">
 
             <LinearLayout
@@ -70,7 +68,6 @@
                     android:id="@+id/tvDetalheNome"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="God of War"
                     android:textStyle="bold"
                     android:textSize="25dp"
                     android:textColor="#FF000000"/>
@@ -91,7 +88,6 @@
                         android:id="@+id/tvDetalheAno"
                         android:layout_width="100dp"
                         android:layout_height="20dp"
-                        android:text="2021"
                         android:textColor="#FF000000"/>
                 </LinearLayout>
 
@@ -101,7 +97,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
-                android:text="AAAAAAAAAA"
                 android:textColor="#FF000000"/>
 
 
