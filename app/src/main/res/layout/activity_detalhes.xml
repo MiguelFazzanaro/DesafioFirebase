@@ -24,7 +24,6 @@
                 android:id="@+id/ivDetalheGame"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/splash_firebase"
                 android:scaleType="fitXY"/>
         </LinearLayout>
 

@@ -10,7 +10,7 @@ import com.google.firebase.firestore.DocumentReference
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainViewModel(val collectionReference: CollectionReference): ViewModel() {
-
+    var imagemGame = MutableLiveData<String?>()
     var retornoGames = ArrayList<Games>()
 
     fun newGame (game: Games){
@@ -21,8 +21,10 @@ class MainViewModel(val collectionReference: CollectionReference): ViewModel() {
 
     }
 
+    fun saveImage(image: String) {
+        imagemGame.value = image
 
-
+    }
 
 
 }
